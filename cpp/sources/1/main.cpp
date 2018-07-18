@@ -5,7 +5,7 @@ int calcSumofMultiples(int base1, int base2, int limit)
     int sum = 0;
 
     for (int i = 0; i < limit; ++i) {
-        if ((i % base1 == 0) != (i % base2 == 0)) {
+        if ((i % base1 == 0) || (i % base2 == 0)) {
             sum += i;
         }
     }
