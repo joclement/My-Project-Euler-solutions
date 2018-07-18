@@ -1,8 +1,10 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
 
 SET(CMAKE_CXX_STANDARD 14)
+GET_FILENAME_COMPONENT(ExerciseNum ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+STRING(REPLACE " " "_" ExerciseNum ${ExerciseNum})
 
-PROJECT(ProjectEuler2)
+PROJECT(ProjectEuler${ExerciseNum})
 
 SET(SRCS
     main.cpp)
