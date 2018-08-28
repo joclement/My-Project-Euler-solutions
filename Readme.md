@@ -18,7 +18,7 @@ Project Euler Website is [here](projecteuler.net).
 3. X
 4. ?
 5. ?
-6. /
+6. ?
 7. /
 8. /
 9. /
