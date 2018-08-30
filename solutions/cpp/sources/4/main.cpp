@@ -60,18 +60,18 @@ bool isPalindrom(unsigned num)
     return isPalindrom;
 }
 
-unsigned findLargestPalindrom(unsigned digitsNum)
+unsigned findLargestPalindrom(const unsigned digitsNum)
 {
-    unsigned maxNum = getMaxNum(digitsNum);
-    unsigned minNum = getMinNum(digitsNum);
+    const unsigned maxNum = getMaxNum(digitsNum);
+    const unsigned minNum = getMinNum(digitsNum);
 
-    unsigned palindrom;
+    unsigned palindrom = 0;
     for(unsigned a = minNum; a <= maxNum; a++)
     {
-        for(unsigned b = minNum; b <= maxNum; b++)
+        for(unsigned b = a; b <= maxNum; b++)
         {
             unsigned next = a * b;
-            if (isPalindrom(next)) {
+            if (isPalindrom(next) && next > palindrom) {
                 palindrom = next;
             }
         }
